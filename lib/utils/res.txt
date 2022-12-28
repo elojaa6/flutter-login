@@ -1,0 +1,20 @@
+RichText(
+                text: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      child: Icon(
+                        type == AlertType.create ? Icons.save : Icons.check,
+                        size: Responsive.sizeIcon,
+                      ),
+                    ),
+                    TextSpan(
+                        text: type == AlertType.create
+                            ? "guardar".tr
+                            : "aceptar".tr,
+                        style: TextStyle(
+                            color: Styles.colorBottonGuardar,
+                            fontWeight: FontWeight.bold,
+                            fontSize: Get.context!.width > 600 ? 18 : 10)),
+                  ],
+                ),
+              )

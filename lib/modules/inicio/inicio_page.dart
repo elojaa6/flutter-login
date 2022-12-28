@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto/modules/inicio/sections/service/service_section.dart';
 import 'package:proyecto/modules/inicio/sections/topsection/top_section.dart';
 
 import 'constants.dart';
@@ -15,11 +14,14 @@ class InicioPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
           child: Column(
-        children: [
+        children: const [
           TopSection(),
+          SizedBox(
+            height: 20,
+          ),
           SizedBox(height: kDefaultPadding * 2),
           AboutSection(),
-          ServiceSection(),
+          //ServiceSection(),
           RecentWorkSection(),
           //Feedback(),
           SizedBox(height: kDefaultPadding),

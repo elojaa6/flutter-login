@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-
-import '../../components/hireme_cart.dart';
-import '../../components/models/RecentWork.dart';
-import '../../components/section_title.dart';
-import '../../constants.dart';
+import 'package:proyecto/modules/inicio/components/models/recent_work.dart';
+import 'package:proyecto/modules/inicio/components/section_title.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 import 'components/recent_work_card.dart';
 
 class RecentWorkSection extends StatelessWidget {
+  const RecentWorkSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: kDefaultPadding * 6),
+      margin: const EdgeInsets.only(top: kDefaultPadding * 6),
       width: double.infinity,
       // just for demo
       // height: 600,
       decoration: BoxDecoration(
-        color: Color(0xFFF7E8FF).withOpacity(0.3),
-        image: DecorationImage(
+        color: const Color(0xFFF7E8FF).withOpacity(0.3),
+        image: const DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage("assets/images/recent_work_bg.png"),
         ),
@@ -24,15 +24,15 @@ class RecentWorkSection extends StatelessWidget {
       child: Column(
         children: [
           Transform.translate(
-            offset: Offset(0, -80),
-            child: HireMeCard(),
+            offset: const Offset(0, -80),
+            //child: HireMeCard(),
           ),
-          SectionTitle(
-            title: "Recent Woorks",
-            subTitle: "My Strong Arenas",
+          const SectionTitle(
+            title: "Equipo GIETAES",
+            subTitle: "GIETAES",
             color: Color(0xFFFFB100),
           ),
-          SizedBox(height: kDefaultPadding * 1.5),
+          const SizedBox(height: kDefaultPadding * 1.5),
           SizedBox(
             width: 1110,
             child: Wrap(
@@ -44,7 +44,7 @@ class RecentWorkSection extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: kDefaultPadding * 5),
+          const SizedBox(height: kDefaultPadding * 5),
         ],
       ),
     );

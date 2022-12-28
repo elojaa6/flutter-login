@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-
-import '../../components/default_button.dart';
-import '../../components/section_title.dart';
-import '../../constants.dart';
-import 'components/socal_card.dart';
+import 'package:proyecto/modules/inicio/components/default_button.dart';
+import 'package:proyecto/modules/inicio/components/section_title.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
+import 'components/social_card.dart';
 
 class ContactSection extends StatelessWidget {
+  const ContactSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       // this height only for demo
       // height: 500,
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xFFE8F0F9),
         image: DecorationImage(
           fit: BoxFit.cover,
@@ -20,11 +21,11 @@ class ContactSection extends StatelessWidget {
         ),
       ),
       child: Column(
-        children: [
+        children: const [
           SizedBox(height: kDefaultPadding * 2.5),
           SectionTitle(
-            title: "Contact Me",
-            subTitle: "For Project inquiry and information",
+            title: "Contactanos",
+            subTitle: "Para consultas e información sobre tutorias",
             color: Color(0xFF07E24A),
           ),
           ContactBox()
@@ -42,10 +43,10 @@ class ContactBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 1110),
-      margin: EdgeInsets.only(top: kDefaultPadding * 2),
-      padding: EdgeInsets.all(kDefaultPadding * 3),
-      decoration: BoxDecoration(
+      constraints: const BoxConstraints(maxWidth: 1110),
+      margin: const EdgeInsets.only(top: kDefaultPadding * 2),
+      padding: const EdgeInsets.all(kDefaultPadding * 3),
+      decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
@@ -58,27 +59,27 @@ class ContactBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SocalCard(
-                color: Color(0xFFD9FFFC),
-                iconSrc: "assets/images/skype.png",
+                color: const Color(0xFFD9FFFC),
+                iconSrc: "../../../images/skype.png",
                 name: 'TheFlutterWay',
                 press: () {},
               ),
               SocalCard(
-                color: Color(0xFFE4FFC7),
-                iconSrc: "assets/images/whatsapp.png",
+                color: const Color(0xFFE4FFC7),
+                iconSrc: "../../../images/whatsapp.png",
                 name: 'TheFlutterWay',
                 press: () {},
               ),
               SocalCard(
-                color: Color(0xFFE8F0F9),
-                iconSrc: "assets/images/messanger.png",
+                color: const Color(0xFFE8F0F9),
+                iconSrc: "../../../images/messanger.png",
                 name: 'TheFlutterWay',
                 press: () {},
               ),
             ],
           ),
-          SizedBox(height: kDefaultPadding * 2),
-          ContactForm(),
+          const SizedBox(height: kDefaultPadding * 2),
+          const ContactForm(),
         ],
       ),
     );
@@ -101,9 +102,9 @@ class ContactForm extends StatelessWidget {
             width: 470,
             child: TextFormField(
               onChanged: (value) {},
-              decoration: InputDecoration(
-                labelText: "Your Name",
-                hintText: "Enter Your Name",
+              decoration: const InputDecoration(
+                labelText: "Su nombre",
+                hintText: "Introduzca su nombre",
               ),
             ),
           ),
@@ -111,9 +112,9 @@ class ContactForm extends StatelessWidget {
             width: 470,
             child: TextFormField(
               onChanged: (value) {},
-              decoration: InputDecoration(
-                labelText: "Email Address",
-                hintText: "Enter your email address",
+              decoration: const InputDecoration(
+                labelText: "Dirección de correo electrónico",
+                hintText: "Introduzca su dirección de correo electrónico",
               ),
             ),
           ),
@@ -121,19 +122,9 @@ class ContactForm extends StatelessWidget {
             width: 470,
             child: TextFormField(
               onChanged: (value) {},
-              decoration: InputDecoration(
-                labelText: "Project Type",
-                hintText: "Select Project Type",
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 470,
-            child: TextFormField(
-              onChanged: (value) {},
-              decoration: InputDecoration(
-                labelText: "Project Budget",
-                hintText: "Select Project Budget",
+              decoration: const InputDecoration(
+                labelText: "Número de Teléfono",
+                hintText: "Introduzca su número",
               ),
             ),
           ),
@@ -142,17 +133,17 @@ class ContactForm extends StatelessWidget {
             // TextField by default cover the height, i tryed to fix this problem but i cant
             child: TextFormField(
               onChanged: (value) {},
-              decoration: InputDecoration(
-                labelText: "Description",
-                hintText: "Write some description",
+              decoration: const InputDecoration(
+                labelText: "Mensaje",
+                hintText: "Introduzca un Mensaje",
               ),
             ),
           ),
-          SizedBox(height: kDefaultPadding * 2),
+          const SizedBox(height: kDefaultPadding * 2),
           Center(
             child: FittedBox(
               child: DefaultButton(
-                imageSrc: "assets/images/contact_icon.png",
+                imageSrc: "../../../images/contact_icon.png",
                 text: "Contact Me!",
                 press: () {},
               ),

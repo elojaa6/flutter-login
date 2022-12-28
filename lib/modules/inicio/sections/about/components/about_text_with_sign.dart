@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 
 class AboutTextWithSign extends StatelessWidget {
   const AboutTextWithSign({
@@ -13,14 +12,13 @@ class AboutTextWithSign extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "About \nmy story",
+          "Tutorias \nentre Pares",
           style: Theme.of(context)
               .textTheme
               .headline2
               ?.copyWith(fontWeight: FontWeight.bold, color: Colors.black),
         ),
-        SizedBox(height: kDefaultPadding * 2),
-        Image.asset("assets/images/sign.png")
+        const SizedBox(height: kDefaultPadding * 2)
       ],
     );
   }

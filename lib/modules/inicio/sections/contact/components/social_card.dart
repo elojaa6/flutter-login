@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: library_private_types_in_public_api
 
-import '../../../constants.dart';
+import 'package:flutter/material.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 
 class SocalCard extends StatefulWidget {
   const SocalCard({
@@ -16,10 +17,10 @@ class SocalCard extends StatefulWidget {
   final Function press;
 
   @override
-  _SocalCardState createState() => _SocalCardState();
+  SocalCardState createState() => SocalCardState();
 }
 
-class _SocalCardState extends State<SocalCard> {
+class SocalCardState extends State<SocalCard> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
@@ -34,8 +35,8 @@ class _SocalCardState extends State<SocalCard> {
           });
         },
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 200),
-          padding: EdgeInsets.symmetric(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(
             vertical: kDefaultPadding / 2,
             horizontal: kDefaultPadding * 1.5,
           ),
@@ -51,7 +52,7 @@ class _SocalCardState extends State<SocalCard> {
                 height: 80,
                 width: 80,
               ),
-              SizedBox(width: kDefaultPadding),
+              const SizedBox(width: kDefaultPadding),
               Text(widget.name),
             ],
           ),

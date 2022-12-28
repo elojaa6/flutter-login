@@ -16,9 +16,9 @@ class LogoAndBlurBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image.asset("images/logopngGIETAES.png"),
-        Spacer(),
+        const Spacer(),
         GlassContent(size: size),
-        Spacer(flex: 3),
+        const Spacer(flex: 3),
       ],
     );
   }

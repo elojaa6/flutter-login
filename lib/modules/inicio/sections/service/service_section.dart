@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
-
-import '../../components/models/Service.dart';
-import '../../components/section_title.dart';
-import '../../constants.dart';
+import 'package:proyecto/modules/inicio/components/models/lista.dart';
+import 'package:proyecto/modules/inicio/components/section_title.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 import 'components/service_card.dart';
 
 class ServiceSection extends StatelessWidget {
+  const ServiceSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
-      constraints: BoxConstraints(maxWidth: 1110),
+      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          SectionTitle(
+          const SectionTitle(
             color: Color(0xFFFF0000),
-            title: "Service Offerings",
-            subTitle: "My Strong Arenas",
+            title: "Equipo GIETAES",
+            subTitle: "GIETAES",
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(
-                services.length, (index) => ServiceCard(index: index)),
-          )
+                lista.length, (index) => ServiceCard(index: index)),
+          ),
         ],
       ),
     );

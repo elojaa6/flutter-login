@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../components/models/RecentWork.dart';
-import '../../../constants.dart';
+import 'package:proyecto/modules/inicio/components/models/recent_work.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 
 class RecentWorkCard extends StatefulWidget {
   // just press "Command + ."
@@ -15,10 +14,10 @@ class RecentWorkCard extends StatefulWidget {
   final Function press;
 
   @override
-  _RecentWorkCardState createState() => _RecentWorkCardState();
+  RecentWorkCardState createState() => RecentWorkCardState();
 }
 
-class _RecentWorkCardState extends State<RecentWorkCard> {
+class RecentWorkCardState extends State<RecentWorkCard> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         height: 320,
         width: 540,
         decoration: BoxDecoration(
@@ -45,13 +44,14 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
             Image.asset(recentWorks[widget.index].image),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(recentWorks[widget.index].category.toUpperCase()),
-                    SizedBox(height: kDefaultPadding / 2),
+                    const SizedBox(height: kDefaultPadding / 2),
                     Text(
                       recentWorks[widget.index].title,
                       style: Theme.of(context)
@@ -59,11 +59,11 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                           .headline5
                           ?.copyWith(height: 1.5),
                     ),
-                    SizedBox(height: kDefaultPadding),
-                    Text(
+                    const SizedBox(height: kDefaultPadding),
+                    /*Text(
                       "View Details",
                       style: TextStyle(decoration: TextDecoration.underline),
-                    )
+                    )*/
                   ],
                 ),
               ),

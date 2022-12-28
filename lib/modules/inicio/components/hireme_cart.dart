@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 
-import '../constants.dart';
 import 'default_button.dart';
 
 class HireMeCard extends StatelessWidget {
@@ -11,8 +11,8 @@ class HireMeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(kDefaultPadding * 2),
-      constraints: BoxConstraints(maxWidth: 1110),
+      padding: const EdgeInsets.all(kDefaultPadding * 2),
+      constraints: const BoxConstraints(maxWidth: 1110),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -25,8 +25,8 @@ class HireMeCard extends StatelessWidget {
             height: 80,
             width: 80,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: SizedBox(
               height: 80,
               child: VerticalDivider(),
@@ -35,7 +35,7 @@ class HireMeCard extends StatelessWidget {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Text(
                   "Starting New Project?",
                   style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),

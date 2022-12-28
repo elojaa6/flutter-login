@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 
 class MyOutlineButton extends StatelessWidget {
   const MyOutlineButton({
@@ -21,8 +20,8 @@ class MyOutlineButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          side: BorderSide(color: Color(0xFFEDEDED)),
-          padding: EdgeInsets.symmetric(
+          side: const BorderSide(color: Color(0xFFEDEDED)),
+          padding: const EdgeInsets.symmetric(
             vertical: kDefaultPadding,
             horizontal: kDefaultPadding * 2.5,
           ),
@@ -36,7 +35,7 @@ class MyOutlineButton extends StatelessWidget {
               imageSrc,
               height: 40,
             ),
-            SizedBox(width: kDefaultPadding),
+            const SizedBox(width: kDefaultPadding),
             Text(text)
           ],
         ),

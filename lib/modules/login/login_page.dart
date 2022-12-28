@@ -1,8 +1,9 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, unused_element
 
 import 'package:flutter/material.dart';
-import 'package:proyecto/modules/inicio/inicio_page.dart';
+import 'package:proyecto/modules/perfil/perfil_page.dart';
 
+// ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class LoginPage extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -19,11 +20,11 @@ class LoginPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 01,
               ),
               Image.asset('images/Logo.png'),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Container(
@@ -35,25 +36,25 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Text(
+                      const Text(
                         'Bienvenido',
                         style: TextStyle(
                             fontSize: 35, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'Acceda a su cuenta',
                         style: TextStyle(fontSize: 15, color: Colors.grey),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Container(
+                      const SizedBox(
                         width: 250,
                         child: TextField(
                           decoration: InputDecoration(
@@ -64,7 +65,7 @@ class LoginPage extends StatelessWidget {
                               )),
                         ),
                       ),
-                      Container(
+                      const SizedBox(
                         width: 250,
                         child: TextField(
                           decoration: InputDecoration(
@@ -76,10 +77,10 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(20, 20, 40, 20),
+                        padding: const EdgeInsets.fromLTRB(20, 20, 40, 20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
+                          children: const [
                             Text(
                               'Contraseña olvidada',
                               style: TextStyle(
@@ -88,7 +89,7 @@ class LoginPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
@@ -97,7 +98,7 @@ class LoginPage extends StatelessWidget {
                           width: 250,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                   begin: Alignment.centerLeft,
                                   end: Alignment.centerRight,
                                   colors: [
@@ -105,7 +106,7 @@ class LoginPage extends StatelessWidget {
                                     Colors.yellow,
                                     Colors.blueAccent,
                                   ])),
-                          child: Padding(
+                          child: const Padding(
                             padding: EdgeInsets.all(12.0),
                             child: Text(
                               'Login',
@@ -120,10 +121,10 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => InicioPage()));
+                                  builder: (context) => const PerfilPage()));
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
@@ -132,7 +133,7 @@ class LoginPage extends StatelessWidget {
                           width: 250,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                   begin: Alignment.centerLeft,
                                   end: Alignment.centerRight,
                                   colors: [
@@ -140,7 +141,7 @@ class LoginPage extends StatelessWidget {
                                     Colors.yellow,
                                     Colors.blueAccent,
                                   ])),
-                          child: Padding(
+                          child: const Padding(
                             padding: EdgeInsets.all(12.0),
                             child: Text(
                               'Microsoft',
@@ -155,22 +156,22 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => InicioPage()));
+                                  builder: (context) => const PerfilPage()));
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Text(
+                      const Text(
                         'O conéctese a través de las redes sociales',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
+                        children: const [
                           Icon(
                             Icons.facebook,
                             color: Color.fromARGB(255, 51, 0, 255),

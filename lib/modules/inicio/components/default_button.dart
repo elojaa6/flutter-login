@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
+import 'package:proyecto/modules/inicio/constants.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
@@ -23,7 +22,8 @@ class DefaultButton extends StatelessWidget {
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),
-                side: BorderSide(color: Color.fromARGB(255, 229, 230, 247)))),
+                side: const BorderSide(
+                    color: Color.fromARGB(255, 229, 230, 247)))),
       ),
       onPressed: () {
         press;
@@ -31,7 +31,7 @@ class DefaultButton extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(imageSrc, height: 40),
-          SizedBox(width: kDefaultPadding),
+          const SizedBox(width: kDefaultPadding),
           Text(text),
         ],
       ),
