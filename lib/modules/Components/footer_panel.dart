@@ -57,11 +57,11 @@ class FooterPanel extends StatelessWidget {
             Row(
               children: [
                 if (!isDesktop) const Spacer(flex: 1),
-                floatingIconsButtons('../../../images/icon/facebook.svg'),
-                floatingIconsButtons('../../images/icon/linkedin.svg'),
-                floatingIconsButtons('../../images/icon/skype.svg'),
-                floatingIconsButtons('../../images/icon/twitter.svg'),
-                floatingIconsButtons('../../images/icon/youtube.svg'),
+                floatingIconsButtons('images/icon/facebook.svg'),
+                floatingIconsButtons('images/icon/linkedin.svg'),
+                floatingIconsButtons('images/icon/skype.svg'),
+                floatingIconsButtons('images/icon/twitter.svg'),
+                floatingIconsButtons('images/icon/youtube.svg'),
                 if (!isDesktop) const Spacer(flex: 1)
               ],
             )

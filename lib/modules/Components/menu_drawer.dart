@@ -72,15 +72,14 @@ class MenuDrawer extends StatelessWidget {
                   thickness: 2,
                 ),
               ),
-              Expanded(
-                  child: Align(
+              Align(
                 alignment: Alignment.bottomCenter,
                 child: Text(
                   'Copyright © 2021 | DBestech',
                   style:
                       TextStyle(color: Colors.blueGrey.shade300, fontSize: 14),
                 ),
-              ))
+              )
             ],
           ),
         ),

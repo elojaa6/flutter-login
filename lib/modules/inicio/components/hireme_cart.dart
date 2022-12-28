@@ -21,7 +21,7 @@ class HireMeCard extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
-            "assets/images/email.png",
+            "images/email.png",
             height: 80,
             width: 80,
           ),
@@ -32,21 +32,19 @@ class HireMeCard extends StatelessWidget {
               child: VerticalDivider(),
             ),
           ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  "Starting New Project?",
-                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: kDefaultPadding / 2),
-                Text(
-                  "Get an estimate for the new project",
-                  style: TextStyle(fontWeight: FontWeight.w200),
-                )
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                "Starting New Project?",
+                style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: kDefaultPadding / 2),
+              Text(
+                "Get an estimate for the new project",
+                style: TextStyle(fontWeight: FontWeight.w200),
+              )
+            ],
           ),
           DefaultButton(
             text: "Hire Me!",

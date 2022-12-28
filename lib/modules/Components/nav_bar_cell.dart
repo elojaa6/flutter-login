@@ -18,15 +18,14 @@ class NavBarCell extends StatelessWidget {
             accountEmail: const Text("examplea@.com"),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
-                child: Image.asset('../../../images/person.png',
+                child: Image.asset('images/person.png',
                     width: 90, height: 90, fit: BoxFit.cover),
               ),
             ),
             decoration: const BoxDecoration(
               color: Colors.blue,
               image: DecorationImage(
-                  image: AssetImage('../../../images/menuImg.jpg'),
-                  fit: BoxFit.cover),
+                  image: AssetImage('images/menuImg.jpg'), fit: BoxFit.cover),
             ),
           ),
           ListTile(

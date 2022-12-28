@@ -66,68 +66,60 @@ Row buttonsOperationDialog(
   return Row(
     children: [
       if (renderedPublish == true)
-        Expanded(
-          child: IconButton(
-            icon: Responsive.web
-                ? const Icon(Icons.publish)
-                : const Icon(Icons.publish),
-            onPressed: () {
-              publishFunction!();
-            },
-            tooltip: 'publicarAhora'.tr,
-            iconSize: Responsive.sizeIcon,
-            color: Colors.blue,
-          ),
+        IconButton(
+          icon: Responsive.web
+              ? const Icon(Icons.publish)
+              : const Icon(Icons.publish),
+          onPressed: () {
+            publishFunction!();
+          },
+          tooltip: 'publicarAhora'.tr,
+          iconSize: Responsive.sizeIcon,
+          color: Colors.blue,
         ),
       if (renderedEdit == true)
-        Expanded(
-          child: IconButton(
-            icon: Responsive.web
-                ? Row(
-                    children: const [Icon(Icons.edit)],
-                  )
-                : const Icon(Icons.edit),
-            onPressed: () {
-              editFunction!();
-            },
-            tooltip: 'editar'.tr,
-            iconSize: Responsive.sizeIcon,
-            color: Colors.blue,
-          ),
+        IconButton(
+          icon: Responsive.web
+              ? Row(
+                  children: const [Icon(Icons.edit)],
+                )
+              : const Icon(Icons.edit),
+          onPressed: () {
+            editFunction!();
+          },
+          tooltip: 'editar'.tr,
+          iconSize: Responsive.sizeIcon,
+          color: Colors.blue,
         ),
       if (renderedView == true)
-        Expanded(
-          child: IconButton(
-            icon: Responsive.web
-                ? Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [Icon(Icons.visibility)],
-                  )
-                : const Icon(Icons.visibility),
-            onPressed: () {
-              viewFunction!();
-            },
-            tooltip: 'ver'.tr,
-            iconSize: Responsive.sizeIcon,
-            color: Colors.green,
-          ),
+        IconButton(
+          icon: Responsive.web
+              ? Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [Icon(Icons.visibility)],
+                )
+              : const Icon(Icons.visibility),
+          onPressed: () {
+            viewFunction!();
+          },
+          tooltip: 'ver'.tr,
+          iconSize: Responsive.sizeIcon,
+          color: Colors.green,
         ),
       if (renderedDelete == true)
-        Expanded(
-          child: IconButton(
-            tooltip: 'Cancelar/Eliminar'.tr,
-            icon: Responsive.web
-                ? Row(children: const [Icon(Icons.cancel_rounded)])
-                : const Icon(
-                    Icons.cancel_rounded,
-                    color: Colors.red,
-                  ),
-            onPressed: () {
-              deleteFunction!();
-            },
-            iconSize: Responsive.sizeIcon,
-            color: Colors.red,
-          ),
+        IconButton(
+          tooltip: 'Cancelar/Eliminar'.tr,
+          icon: Responsive.web
+              ? Row(children: const [Icon(Icons.cancel_rounded)])
+              : const Icon(
+                  Icons.cancel_rounded,
+                  color: Colors.red,
+                ),
+          onPressed: () {
+            deleteFunction!();
+          },
+          iconSize: Responsive.sizeIcon,
+          color: Colors.red,
         ),
     ],
   );

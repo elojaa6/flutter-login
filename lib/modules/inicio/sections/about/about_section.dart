@@ -19,17 +19,13 @@ class AboutSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
               AboutTextWithSign(),
-              Expanded(
-                child: AboutSectionText(
-                    text:
-                        "Un encuentro y crecimiento mutuo Tutor-Tutorado. Se desenvuelve en un ambiente de familiaridad, confianza y respeto mutuo. Propicia una relación educativa horizontal."),
-              ),
+              AboutSectionText(
+                  text:
+                      "Un encuentro y crecimiento mutuo Tutor-Tutorado. Se desenvuelve en un ambiente de familiaridad, confianza y respeto mutuo. Propicia una relación educativa horizontal."),
               ExperienceCard(numOfExp: "3"),
-              Expanded(
-                child: AboutSectionText(
-                    text:
-                        "El GIETAES busca consolidarse en tres años como un equipo efectivo en tutorías académicas convirtiéndose en un referente a nivel nacional de la aplicación de metodologías alternativas para la disminución de índices de repitencia y deserción en los primeros años de educación universitaria."),
-              )
+              AboutSectionText(
+                  text:
+                      "El GIETAES busca consolidarse en tres años como un equipo efectivo en tutorías académicas convirtiéndose en un referente a nivel nacional de la aplicación de metodologías alternativas para la disminución de índices de repitencia y deserción en los primeros años de educación universitaria.")
             ],
           ),
           const SizedBox(height: kDefaultPadding * 3),
@@ -37,11 +33,9 @@ class AboutSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
               TextoConMesanje(),
-              Expanded(
-                child: AboutSectionText(
-                    text:
-                        "GIETAES es un equipo integrado por docentes del área de Razón y Fe y tutores de alto rendimiento académico de las diferentes carreras, cuyo propósito es contribuir a elevar la calidad de la educación para disminuir los índices de deserción y repitencia, de los estudiantes de los primeros años de la UPS Sede Cuenca."),
-              ),
+              AboutSectionText(
+                  text:
+                      "GIETAES es un equipo integrado por docentes del área de Razón y Fe y tutores de alto rendimiento académico de las diferentes carreras, cuyo propósito es contribuir a elevar la calidad de la educación para disminuir los índices de deserción y repitencia, de los estudiantes de los primeros años de la UPS Sede Cuenca."),
             ],
           ),
           const SizedBox(height: kDefaultPadding * 3),

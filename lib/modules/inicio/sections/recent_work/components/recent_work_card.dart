@@ -42,30 +42,27 @@ class RecentWorkCardState extends State<RecentWorkCard> {
         child: Row(
           children: [
             Image.asset(recentWorks[widget.index].image),
-            Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(recentWorks[widget.index].category.toUpperCase()),
-                    const SizedBox(height: kDefaultPadding / 2),
-                    Text(
-                      recentWorks[widget.index].title,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline5
-                          ?.copyWith(height: 1.5),
-                    ),
-                    const SizedBox(height: kDefaultPadding),
-                    /*Text(
-                      "View Details",
-                      style: TextStyle(decoration: TextDecoration.underline),
-                    )*/
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(recentWorks[widget.index].category.toUpperCase()),
+                  const SizedBox(height: kDefaultPadding / 2),
+                  Text(
+                    recentWorks[widget.index].title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline5
+                        ?.copyWith(height: 1.5),
+                  ),
+                  const SizedBox(height: kDefaultPadding),
+                  /*Text(
+                    "View Details",
+                    style: TextStyle(decoration: TextDecoration.underline),
+                  )*/
+                ],
               ),
             ),
           ],

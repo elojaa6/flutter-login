@@ -15,15 +15,14 @@ class ProfilePanel extends StatelessWidget {
           isMobile ? 0 : 150, isMobile ? 15 : width / 10, 10),
       child: Stack(children: [
         const ProfileCard(),
-        Expanded(
-            child:
-                Container(alignment: Alignment.center, child: profileImage()))
+        Align(
+            alignment: Alignment.center, child: SizedBox(child: profileImage()))
       ]),
     );
   }
 
   Widget profileImage() => const CircleAvatar(
         radius: 70,
-        backgroundImage: AssetImage('../../../images/person.png'),
+        backgroundImage: AssetImage('images/person.png'),
       );
 }

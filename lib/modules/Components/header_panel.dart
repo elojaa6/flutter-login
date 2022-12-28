@@ -39,16 +39,16 @@ class HeaderPanel extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   letterSpacing: .5)),
           isMobile ? const Spacer(flex: 1) : const SizedBox(width: 50),
-          iconLabelButtons('DOCS', "../../../images/icon/document")
+          // iconLabelButtons('DOCS', "../../../images/icon/document")
         ],
       );
 
   Widget rightSidePanel() =>
       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        logoButton("../../../images/icon/facebook.svg"),
-        logoButton("../../../images/icon/twitter.svg"),
-        logoButton("../../../images/icon/linkedin.svg"),
-        normalButton('DOWNLOAD', Colors.grey,
-            "../../../images/icon/download.png", Colors.grey, Colors.white)
+        logoButton("images/icon/facebook.svg"),
+        logoButton("images/icon/twitter.svg"),
+        logoButton("images/icon/linkedin.svg"),
+        normalButton('DOWNLOAD', Colors.grey, "images/icon/download.png",
+            Colors.grey, Colors.white)
       ]);
 }

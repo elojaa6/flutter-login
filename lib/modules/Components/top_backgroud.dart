@@ -12,7 +12,7 @@ class TopBackgroud extends StatelessWidget {
     return SizedBox(
       width: width,
       height: PlatFormServices.isMobile(context) ? 300 : 450,
-      child: Image.asset('../../images/backgroud.jpg', fit: BoxFit.cover),
+      child: Image.asset('images/backgroud.jpg', fit: BoxFit.cover),
     );
   }
 }
